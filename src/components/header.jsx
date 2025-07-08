@@ -2,23 +2,47 @@ export default function Header() {
   return (
     <header
       className="
-      w-full h-14 bg-transparent
+      w-full h-15 px-8
+      border-b
+      sticky top-0
       flex justify-between items-center
-      px-8 border-b-1
+      shadow-2xl z-10
     "
     >
       <h1 className="text-2xl">LOGO</h1>
       <nav>
-        <ul className="flex gap-4">
-          <li><link rel="stylesheet" href="#" />Autos</li>
-          <li>Nosotros</li>
-          <li>Servicios</li>
-          <li>Vender</li>
+        <ul className="flex gap-4 font-semibold">
+          <li>
+            <a href="#">Autos</a>
+          </li>
+          <li>
+            <a href="#">Nosotros</a>
+          </li>
+          <li>
+            <a href="#servicios">Servicios</a>
+          </li>
+          <li>
+            <a href="#">Vender</a>
+          </li>
         </ul>
       </nav>
       <div className="flex justify-center items-center gap-4">
-        <button className="p-2.5 border-2 rounded-sm"></button>
-        <button className="p-2.5 border-2 rounded-sm"></button>
+        <button className="p-1.75 border-2 rounded-sm">
+          <img
+            width="24"
+            height="24"
+            src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png"
+            alt="shopping-cart--v1"
+          />
+        </button>
+        <button className="p-1.75 border-2 rounded-sm">
+          <img
+            width="24"
+            height="24"
+            src="https://img.icons8.com/fluency-systems-filled/48/user.png"
+            alt="user"
+          />
+        </button>
       </div>
     </header>
   );

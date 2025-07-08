@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+:root {
+  --primary--color: #c8d9e6;
+  --secondary--color: #2F4156;
+  --thirty--color: #F5EFEB;
+  --font--color: #2F4156;
+
+  --font-manrope: "Manrope", sans-serif;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: var(--font-manrope);
+  background: var(--primary--color);
+  color: var(--font--color)
+}
+
+header{
+  background: var(--primary--color);
+}
+
+article {
+  max-width: 300px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+section{
+  padding: 4rem 2.5rem;
+  padding-top: 0;
+}
