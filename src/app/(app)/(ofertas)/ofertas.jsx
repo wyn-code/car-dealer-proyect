@@ -1,4 +1,4 @@
-import CardOfertas from "./article-ofertas";
+import ArticleVehiculo from "../../../components/article-vehiculo";
 
 export default function Ofertas() {
   return (
@@ -6,7 +6,10 @@ export default function Ofertas() {
       <h2>OFERTAS</h2>
       <div className="h-50 w-full flex justify-between items-center max-w-3xl">
         <button className="w-8 h-8 border rounded-full"></button>
-        <CardOfertas />
+        <div className="flex px-5 gap-5">
+          <ArticleVehiculo />
+          <ArticleVehiculo />
+        </div>
         <button className="w-8 h-8 border rounded-full"></button>
       </div>
     </section>
