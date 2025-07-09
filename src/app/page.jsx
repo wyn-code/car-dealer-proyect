@@ -1,6 +1,6 @@
-import Marcas from "./(marcas)/marcas";
-import Ofertas from "./(ofertas)/ofertas";
-import Servicios from "./(servicios)/servicios";
+import Marcas from "./(app)/(marcas)/marcas";
+import Ofertas from "./(app)/(ofertas)/ofertas";
+import Servicios from "./(app)/(servicios)/servicios";
 
 export default function Home() {
   return (
