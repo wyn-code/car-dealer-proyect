@@ -27,9 +27,9 @@ export default function ArticleVehiculo({ oferta }) {
           </h3>
         </div>
       </div>
-      <button className="bg-[var(--thirty-color)] font-extrabold border px-7 rounded-lg shadow-lg shadow-black/20 cursor-pointer">
+      <a href="/comprar" className="bg-[var(--thirty-color)] font-extrabold border px-7 rounded-lg shadow-lg shadow-black/20 cursor-pointer">
         Ver
-      </button>
+      </a>
     </article>
   );
 }
