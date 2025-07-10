@@ -3,7 +3,7 @@ export default function FiltrosVehiculos() {
     <form
       action="sumbit"
       method="post"
-      className="bg-[var(--thirty-color)] flex gap-10 justify-between items-center rounded w-full py-2 px-4 "
+      className="flex gap-10 justify-between items-center rounded w-full py-2 px-4 "
     >
       <div className="flex flex-wrap gap-2 items-center justify-center">
         <input

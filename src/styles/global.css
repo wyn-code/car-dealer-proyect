@@ -42,10 +42,11 @@ section {
 }
 
 form {
+  background: var(--thirty-color);
   color: var(--font-color);
 }
 
-form > div > input {
+input {
   border: 1px solid #000;
   padding: 4px;
   border-radius: 5px;

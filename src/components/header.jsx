@@ -19,10 +19,10 @@ export default function Header() {
             <a href="#">Nosotros</a>
           </li>
           <li>
-            <a href="#servicios">Servicios</a>
+            <a href="#">Servicios</a>
           </li>
           <li>
-            <a href="#">Vender</a>
+            <a href="/vender">Vender</a>
           </li>
         </ul>
       </nav>
