@@ -22,9 +22,9 @@ export default function Vender() {
     const cargarDatos = async () => {
       try {
         const [resModelos, resTipos, resCondiciones] = await Promise.all([
-          fetch("https://localhost:7247/api/modelos"),
-          fetch("https://localhost:7247/api/tiposAutos"),
-          fetch("https://localhost:7247/api/condiciones"),
+          fetch("https://localhost:7288/api/modelos"),
+          fetch("https://localhost:7288/api/tiposAutos"),
+          fetch("https://localhost:7288/api/condiciones"),
         ]);
 
          console.log("Status modelos:", resModelos.status);
@@ -72,7 +72,7 @@ export default function Vender() {
     };
 
     try {
-      const res = await fetch("https://localhost:7247/api/cars", {
+      const res = await fetch("https://localhost:7288/api/cars", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(autoParaEnviar),

@@ -8,7 +8,7 @@ export default function Vehiculos() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://localhost:7247/api/cars") // Ruta del backend
+    fetch("https://localhost:7288/api/cars") // Ruta del backend
       .then((res) => res.json())
       .then((data) => {
         setAutos(data);
