@@ -5,7 +5,7 @@ export default function ArticleVehiculo({ oferta }) {
     marca: "Ford",
     modelo: "Fiesta",
     precio: 15000000,
-    img: "/assets/images/fotosPrueba/Fiesta.jpg",
+    imagenUrl: "/assets/images/fotosPrueba/Fiesta.jpg",
   };
 
   const data = oferta || defaultOferta;
@@ -17,7 +17,7 @@ export default function ArticleVehiculo({ oferta }) {
     >
       <div className="relative shadow-lg shadow-black/60">
         <img
-          src={data.img}
+          src={data.imagenUrl}
           alt={`${data.marca} ${data.modelo}`}
           className="w-full object-cover rounded-sm"
         />
@@ -27,7 +27,10 @@ export default function ArticleVehiculo({ oferta }) {
           </h3>
         </div>
       </div>
-      <a href="/comprar" className="bg-[var(--thirty-color)] font-extrabold border px-7 rounded-lg shadow-lg shadow-black/20 cursor-pointer">
+      <a
+        href="/comprar"
+        className="bg-[var(--thirty-color)] font-extrabold border px-7 rounded-lg shadow-lg shadow-black/20 cursor-pointer"
+      >
         Ver
       </a>
     </article>
