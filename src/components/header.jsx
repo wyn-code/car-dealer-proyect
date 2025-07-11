@@ -21,8 +21,7 @@ export default function Header() {
             <Link href="/vehiculos">Autos</Link>
           </li>
           <li>
-            <Link href="#">Nosotros</Link>
-          </li>
+            <a href="#footer">Nosotros</a>
           <li>
             <Link href="#servicios">Servicios</Link>
           </li>
