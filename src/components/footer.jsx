@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="px-10 pt-5 flex flex-col items-center justify-center bg-transparent border-t-1">
+    <footer id="footer" className="px-10 pt-5 flex flex-col items-center justify-center bg-transparent border-t-1">
       <div className="max-w-6xl w-full flex justify-between items-center">
         <div className="min-w-50">
           <div className="border-b flex items-center justify-between p-2">
