@@ -9,7 +9,10 @@ export default function Header() {
       shadow-2xl z-10
     "
     >
-      <h1 className="text-2xl">LOGO</h1>
+      <a href="/" className="text-2xl font-bold hover:text-blue-500 transition-colors duration-200">
+        LOGO
+      </a>
+
       <nav>
         <ul className="flex gap-4 font-semibold">
           <li>
@@ -26,6 +29,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+
       <div className="flex justify-center items-center gap-4">
         <button className="p-1.75 border-2 rounded-sm">
           <img
