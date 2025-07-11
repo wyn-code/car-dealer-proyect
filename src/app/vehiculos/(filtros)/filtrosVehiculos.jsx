@@ -33,28 +33,6 @@ export default function FiltrosVehiculos({ onBuscar }) {
           value={marca}
           onChange={(e) => setMarca(e.target.value)}
         />
-        <div className="flex gap-5 items-center justify-center">
-          <label htmlFor="0km" className="flex gap-1 items-center">
-            0km:
-            <input
-              type="checkbox"
-              id="0km"
-              checked={estado === "0km"}
-              onChange={() => setEstado(estado === "0km" ? null : "0km")}
-              disabled={estado === "usado"}
-            />
-          </label>
-          <label htmlFor="usado" className="flex gap-1 items-center">
-            Usado:
-            <input
-              type="checkbox"
-              id="usado"
-              checked={estado === "usado"}
-              onChange={() => setEstado(estado === "usado" ? null : "usado")}
-              disabled={estado === "0km"}
-            />
-          </label>
-        </div>
       </div>
       <button
         type="submit"
