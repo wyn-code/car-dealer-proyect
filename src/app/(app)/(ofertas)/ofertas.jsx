@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import ArticleVehiculo from "../../../components/article-vehiculo"; // Ajustá la ruta según tu proyecto
+import ArticleVehiculo from "../../../components/article-vehiculo"; // Asegurate que esta ruta es correcta
 
 export default function CarrouselAutos() {
   const [autos, setAutos] = useState([]);
@@ -18,7 +18,7 @@ export default function CarrouselAutos() {
     fetch("https://localhost:7288/api/cars")
       .then((res) => res.json())
       .then((data) => {
-        setAutos(data.slice(0, 6)); // Tomamos solo los primeros 6 autos
+        setAutos(data.slice(0, 6)); // Solo los primeros 6 autos
       })
       .catch((err) => console.error("Error al traer autos:", err));
   }, []);
@@ -33,11 +33,11 @@ export default function CarrouselAutos() {
 
       <div ref={sliderRef} className="keen-slider">
         {autos.map((auto) => (
-          <div key={auto.id_Car} className="keen-slider__slide flex justify-center">
+          <div key={auto.id_Autos} className="keen-slider__slide flex justify-center">
             <ArticleVehiculo
-              id={auto.id_Car}
+              id={auto.id_Autos}
               marca={auto.marca}
-              modelo={auto.modelo}
+              modelo={auto.modelo || "Modelo desconocido"}
               año={auto.año_Modelo}
               imagen={auto.imagen}
             />
@@ -61,4 +61,3 @@ export default function CarrouselAutos() {
     </section>
   );
 }
-
