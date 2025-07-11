@@ -7,22 +7,27 @@ import ArticleMarcas from "./article-marcas";
 export default function Marcas() {
   const marcas = [
     {
-      url: img1,
+      url: "https://www.nissan.com.ar/",
+      img: "/assets/images/fotosPrueba/nissan.png",
       alter: "Nissan",
     },
     {
-      url: img2,
+      url: "https://www.ford.com.ar/",
+      img: "/assets/images/fotosPrueba/ford.png",
       alter: "Ford",
     },
     {
-      url: img3,
+      url: "https://www.toyota.com.ar/",
+      img: "/assets/images/fotosPrueba/toyota.png",
       alter: "Toyota",
     },
     {
-      url: img4,
+      url: "https://www.honda.com.ar/",
+      img: "/assets/images/fotosPrueba/honda.png",
       alter: "Honda",
     },
   ];
+  
 
   return (
     <section id="marcas" className="flex flex-col justify-center items-center">
@@ -30,7 +35,7 @@ export default function Marcas() {
       <div className="flex flex-col items-center gap-10 w-full">
         <div className="flex gap-10 flex-wrap justify-center">
           {marcas.map((marca, index) => (
-            <ArticleMarcas key={index} url={marca.url} alter={marca.alter} />
+            <ArticleMarcas key={index} img={marca.img} alter={marca.alter} url={marca.url} />
           ))}
         </div>
       </div>

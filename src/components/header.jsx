@@ -4,11 +4,12 @@ export default function Header() {
   return (
     <header
       className="
-      w-full h-15 px-8
+      w-full px-8 py-2
       border-b
       sticky top-0
-      flex justify-between items-center
-      shadow-2xl z-10
+      flex flex-wrap justify-between items-center
+      gap-2
+      shadow-2xl shadow-black/50 z-10
     "
     >
       <a href="/" className="text-2xl font-bold hover:text-blue-500 transition-colors duration-200">
@@ -16,17 +17,17 @@ export default function Header() {
       </a>
 
       <nav>
-        <ul className="flex gap-4 font-semibold">
-          <li>
+        <ul className="flex flex-wrap justify-center items-center gap-4 font-semibold">
+          <li className="p-3 cursor-pointer hover:text-blue-500 transition-colors duration-200">
             <Link href="/vehiculos">Autos</Link>
           </li>
-          <li>
+          <li className="p-3 cursor-pointer hover:text-blue-500 transition-colors duration-200">
             <a href="#footer">Nosotros</a>
           </li>
-          <li>
+          <li className="p-3 cursor-pointer hover:text-blue-500 transition-colors duration-200">
             <Link href="#servicios">Servicios</Link>
           </li>
-          <li>
+          <li className="p-3 cursor-pointer hover:text-blue-500 transition-colors duration-200">
             <Link href="/vender">Vender</Link>
           </li>
         </ul>
