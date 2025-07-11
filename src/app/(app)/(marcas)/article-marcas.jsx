@@ -1,7 +1,8 @@
-export default function ArticleMarcas() {
+export default function ArticleMarcas({ url, alter }) {
   return (
     <article className="!max-w-50">
-      <img src="/assets/images/fotosPrueba/ford.png" alt="Servicio 1" />
+      <img src={url.src} alt={alter} />
     </article>
-  )
+  );
 }
+

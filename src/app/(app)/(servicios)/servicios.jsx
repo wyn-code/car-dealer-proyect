@@ -1,9 +1,9 @@
 import ArticleServicio from "./article-servicio";
-//import { fetchDesdeBackend } from "../../../lib/api"; // ajustá según tu alias o ruta
+
 
 
 export default async function Servicios() {
-  // const servicios = await fetchDesdeBackend("servicios");
+
   return (
     <>
     <section id="servicios" className="w-full flex flex-col justify-center items-center">
@@ -19,15 +19,6 @@ export default async function Servicios() {
         </div>
       </div>
     </section>
-
-    {/*/<div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">Servicios</h2>
-      <ul>
-        {servicios.map((s) => (
-          <li key={s.id}>{s.descripcion}</li>
-        ))}
-      </ul>
-    </div>*/}
     </>
   );
 }

@@ -272,5 +272,8 @@ export default function Vender() {
         </form>
       </div>
     </section>
+
   )
+});
 }
+
