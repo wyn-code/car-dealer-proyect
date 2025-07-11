@@ -4,6 +4,7 @@ export default function FiltrosVehiculos({ onBuscar }) {
   const [marca, setMarca] = useState("");
   const [tipo, setTipo] = useState("");
   const [estado, setEstado] = useState(null); // "0km", "usado" o null
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

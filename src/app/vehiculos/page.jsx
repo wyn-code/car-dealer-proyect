@@ -23,6 +23,8 @@ export default function Vehiculos() {
       });
   }, []);
 
+  
+
   const filtrarAutos = ({ marca, tipo, estado }) => {
     console.log("Filtro recibido:", { marca, tipo, estado });
 
