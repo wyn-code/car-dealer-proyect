@@ -99,10 +99,10 @@ export default function Vender() {
   }
 
   return (
-    <section className="flex flex-col items-center justify-between p-8 gap-10">
-      <section className="bg-[var(--secondary-color)] max-w-2xl w-full p-10 rounded-2xl flex flex-col gap-5 items-center text-[var(--thirty-color)] text-center">
+    <section className="flex flex-col items-center justify-between p-5 gap-10">
+      <section className="bg-[var(--secondary-color)] max-w-2xl w-full p-10 rounded-2xl flex flex-col gap-5 items-center text-[var(--thirty-color)] text-center m-8">
         <div>
-          <h2>Vender</h2>
+          <h2 className="p-5">Vender</h2>
           <p className="text-sm">
             Publicá tu vehiculo y conectalo con miles de compradores interesados!
           </p>
@@ -145,14 +145,14 @@ export default function Vender() {
               onChange={handleChange}
               className="w-[48%]"
             />
-            <textarea
+            <input
               placeholder="Descripción"
               name="descripcion"
               value={auto.descripcion}
               onChange={handleChange}
               className="w-full"
             />
-            {/* Selects dinámicos */}
+            {/* Selects dinámicos 
             <select
               name="id_Modelo"
               value={auto.id_Modelo}
@@ -166,7 +166,7 @@ export default function Vender() {
                 </option>
               ))}
             </select>
-
+            */}
             <select
               name="id_Tipo_Auto"
               value={auto.id_Tipo_Auto}

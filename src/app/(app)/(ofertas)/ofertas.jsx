@@ -1,30 +1,64 @@
-import ArticleVehiculo from "../../../components/article-vehiculo";
-//import { fetchDesdeBackend } from "../../../lib/api"; // ajustá según tu alias o ruta
+"use client";
+import { useEffect, useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import ArticleVehiculo from "../../../components/article-vehiculo"; // Ajustá la ruta según tu proyecto
 
-export default async function Ofertas() {
-//  const ofertas = await fetchDesdeBackend("ofertas");
+export default function CarrouselAutos() {
+  const [autos, setAutos] = useState([]);
+  const [sliderRef, instanceRef] = useKeenSlider({
+    loop: true,
+    slides: {
+      perView: 3,
+      spacing: 15,
+    },
+  });
+
+  useEffect(() => {
+    fetch("https://localhost:7288/api/cars")
+      .then((res) => res.json())
+      .then((data) => {
+        setAutos(data.slice(0, 6)); // Tomamos solo los primeros 6 autos
+      })
+      .catch((err) => console.error("Error al traer autos:", err));
+  }, []);
+
+  if (autos.length === 0) return <p className="text-center">Cargando autos...</p>;
+
   return (
-    <>
-    <section className="m-15 flex flex-col justify-center items-center gap-10">
-      <h2>OFERTAS</h2>
-      <div className="h-50 w-full flex justify-between items-center max-w-3xl">
-        <button className="w-8 h-8 border rounded-full"></button>
-        <div className="flex px-5 gap-5">
-          <ArticleVehiculo />
-          <ArticleVehiculo />
-        </div>
-        <button className="w-8 h-8 border rounded-full"></button>
-      </div>
-    </section>
+    <section className="w-full max-w-5xl mx-auto mt-10 relative">
+      <h2 className="text-2xl font-bold mb-5 text-center text-[var(--secondary-color)]">
+        Autos destacados
+      </h2>
 
-    {/*<div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">Ofertas</h2>
-      <ul>
-        {ofertas.map((o) => (
-          <li key={o.id}>{o.nombre}</li>
+      <div ref={sliderRef} className="keen-slider">
+        {autos.map((auto) => (
+          <div key={auto.id_Car} className="keen-slider__slide flex justify-center">
+            <ArticleVehiculo
+              id={auto.id_Car}
+              marca={auto.marca}
+              modelo={auto.modelo}
+              año={auto.año_Modelo}
+              imagen={auto.imagen}
+            />
+          </div>
         ))}
-      </ul>
-    </div>*/}
-  </>
+      </div>
+
+      {/* Botones de navegación */}
+      <button
+        onClick={() => instanceRef.current?.prev()}
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white text-black px-3 py-1 rounded-full shadow hover:bg-gray-200"
+      >
+        ◀
+      </button>
+      <button
+        onClick={() => instanceRef.current?.next()}
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white text-black px-3 py-1 rounded-full shadow hover:bg-gray-200"
+      >
+        ▶
+      </button>
+    </section>
   );
 }
+

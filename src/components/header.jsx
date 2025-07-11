@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header
@@ -16,16 +18,15 @@ export default function Header() {
       <nav>
         <ul className="flex gap-4 font-semibold">
           <li>
-            <a href="/vehiculos">Autos</a>
+            <Link href="/vehiculos">Autos</Link>
           </li>
           <li>
             <a href="#footer">Nosotros</a>
+          <li>
+            <Link href="#servicios">Servicios</Link>
           </li>
           <li>
-            <a href="#servicios">Servicios</a>
-          </li>
-          <li>
-            <a href="/vender">Vender</a>
+            <Link href="/vender">Vender</Link>
           </li>
         </ul>
       </nav>
