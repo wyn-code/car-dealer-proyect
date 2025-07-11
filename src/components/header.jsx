@@ -22,6 +22,7 @@ export default function Header() {
           </li>
           <li>
             <a href="#footer">Nosotros</a>
+          </li>
           <li>
             <Link href="#servicios">Servicios</Link>
           </li>
