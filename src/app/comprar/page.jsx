@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-"use client"
-import { useEffect, useState } from "react"
-=======
+
 "use client";
 import { useEffect, useState } from "react";
->>>>>>> a013ec328a2b2aba9cece95b053305aec03a433f
 
 export default function Comprar() {
   const [autos, setAutos] = useState([]);
@@ -217,24 +213,6 @@ export default function Comprar() {
                 >
                   {eliminandoGlobal ? "Eliminando..." : "Eliminar Auto"}
                 </button>
-<<<<<<< HEAD
-              </div>
-            </div>
-            {autoId && (
-              <button
-                onClick={() => handleEliminar(autoId, auto.marca, auto.modelo)} // Pasa 'id_Autos'
-                disabled={eliminandoGlobal}
-                className="w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 disabled:opacity-50 mt-4"
-              >
-                {eliminandoGlobal ? "Eliminando..." : "Eliminar Auto"}
-              </button>
-            )}
-          </section>
-        )
-      })}
-    </section>
-  )
-=======
               )}
             </section>
           );
@@ -340,5 +318,4 @@ export default function Comprar() {
       )}
     </>
   );
->>>>>>> a013ec328a2b2aba9cece95b053305aec03a433f
 }
