@@ -1,8 +1,9 @@
-export default function ArticleMarcas({ url, alter }) {
+export default function ArticleMarcas({ img, alter, url }) {
   return (
-    <article className="!max-w-50">
-      <img src={url.src} alt={alter} />
+    <article className="h-50 !max-w-50">
+      <a href={url} className="w-full h-full flex items-center justify-center">
+        <img src={img} alt={alter} />
+      </a>
     </article>
   );
 }
-
