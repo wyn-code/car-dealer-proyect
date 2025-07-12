@@ -1,4 +1,4 @@
-export default function ArticleVehiculo({ marca, modelo, año, imagen }) {
+export default function ArticleVehiculo({ id, marca, modelo, año, imagen }) {
   return (
     <article className="!border-none flex flex-col justify-center items-center gap-5 max-w-lg">
       <div className="relative shadow-lg shadow-black/60 w-full">
@@ -14,8 +14,10 @@ export default function ArticleVehiculo({ marca, modelo, año, imagen }) {
         </div>
       </div>
       <p className="text-sm text-gray-500">Año: {año}</p>
+
+      {/* 👇 Pasás el id como query param */}
       <a
-        href="/comprar"
+        href={`/comprar?id=${id}`}
         className="bg-[var(--thirty-color)] font-extrabold border px-7 py-1.5 rounded-lg shadow-lg shadow-black/20 cursor-pointer"
       >
         Ver
