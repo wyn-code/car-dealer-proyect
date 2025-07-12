@@ -13,7 +13,7 @@ export default function Header() {
     "
     >
       <a href="/" className="text-2xl font-bold hover:text-blue-500 transition-colors duration-200">
-        LOGO
+        Vehicle Store
       </a>
 
       <nav>
